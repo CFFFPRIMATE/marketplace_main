@@ -1,7 +1,7 @@
 # nombre del proyecto Marketplace
 
 # Signup y Login en Forms.py
-'''Python
+```Python
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
@@ -55,11 +55,11 @@ class SignupForm(UserCreationForm):
             'class': 'form-control'
         }
     ))
-'''
+```
 
 
 # Funciones en views.py
-'''python
+```python
 from django.shortcuts import render
 from .models import Item, Category
 from django.shortcuts import get_object_or_404
@@ -113,10 +113,10 @@ def register (request):
                         'form' : form
                     }
             return render (request, 'store/signup.html', context)
-'''
+```
 
 # Login, register urls.py
-'''Python
+```Python
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from.views import contact, detail, register
@@ -129,10 +129,10 @@ urlpatterns = [
           authentication_form= LoginForm),
     path('detail/<int:pk>/', detail, name='detail'),
 ]
-'''
+```
 
 # Templates templates/store login, signup
-'''html
+```html
 {% extends 'store/base.html' %}
 
 
@@ -181,4 +181,4 @@ urlpatterns = [
 
 
 {% endblock %}
-'''
+```
